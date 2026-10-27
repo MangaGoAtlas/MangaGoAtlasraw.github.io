@@ -52,7 +52,7 @@
     for(const c of rows){const k=chapterId(c);if(k&&!latestByManga.has(k))latestByManga.set(k,c)}
     const latest=[...latestByManga.values()].sort((a,b)=>time(b)-time(a)||Number(b.number||0)-Number(a.number||0));
     if(!latest.length){
-      const mangaCard=m=>'<a class="ma-home-card" href="/manga.html?slug='+encodeURIComponent(m.slug||m.id||m.title||'')+'"><img src="'+esc(GH+String(m.cover||'').replace(/^\\/+/,''))+'" alt="'+esc(m.title||'Manga')+'" loading="lazy"><div class="ma-home-overlay"><small>MANGA</small><strong>'+esc(m.title||m.name||'Manga')+'</strong><span>'+esc(m.native_title||'View manga')+'</span></div></a>';
+      const mangaCard=m=>'<a class="ma-home-card" href="/manga.html?slug='+encodeURIComponent(m.slug||m.id||m.title||'')+'"><img src="'+esc(GH+String(m.cover||'').split('/').filter(Boolean).join('/'))+'" alt="'+esc(m.title||'Manga')+'" loading="lazy"><div class="ma-home-overlay"><small>MANGA</small><strong>'+esc(m.title||m.name||'Manga')+'</strong><span>'+esc(m.native_title||'View manga')+'</span></div></a>';
       app.innerHTML='<div class="ma-home-wrap"><section class="ma-home-section"><div class="ma-home-heading"><div><span>MANGA LIBRARY</span><h2>Browse Manga</h2><p>Manga titles are kept. No chapters are currently published.</p></div></div><div class="ma-home-grid">'+mangas.map(mangaCard).join('')+'</div></section></div>';
       return;
     }
