@@ -8,7 +8,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "the-fragrant-flowers-bloom-dignifiedly",
-      "updated_at": "2026-09-18T09:54:57.605Z"
+      "updated_at": "2026-09-18T09:54:57.605Z",
+      "cover": "images/covers/the-fragrant-flowers-bloom-dignifiedly.svg"
     },
     {
       "id": "one-piece",
@@ -17,7 +18,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "one-piece",
-      "updated_at": "2026-09-16T16:47:48.491Z"
+      "updated_at": "2026-09-16T16:47:48.491Z",
+      "cover": "images/covers/one-piece.svg"
     },
     {
       "id": "days",
@@ -25,7 +27,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "days",
-      "native_title": ""
+      "native_title": "",
+      "cover": "images/covers/days.svg"
     },
     {
       "id": "boku-to-roboko",
@@ -34,7 +37,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "boku-to-roboko",
-      "updated_at": "2026-09-16T17:25:19.965Z"
+      "updated_at": "2026-09-16T17:25:19.965Z",
+      "cover": "images/covers/boku-to-roboko.svg"
     },
     {
       "id": "mokushiroku-no-yonkishi",
@@ -43,7 +47,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "mokushiroku-no-yonkishi",
-      "updated_at": "2026-09-18T09:54:40.856Z"
+      "updated_at": "2026-09-18T09:54:40.856Z",
+      "cover": "images/covers/mokushiroku-no-yonkishi.svg"
     },
     {
       "id": "blue-lock",
@@ -52,7 +57,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "blue-lock",
-      "updated_at": "2026-09-18T08:22:01.164Z"
+      "updated_at": "2026-09-18T08:22:01.164Z",
+      "cover": "images/covers/blue-lock.svg"
     },
     {
       "id": "boruto-two-blue-vortex",
@@ -61,7 +67,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "boruto-two-blue-vortex",
-      "updated_at": "2026-09-18T16:53:23.916Z"
+      "updated_at": "2026-09-18T16:53:23.916Z",
+      "cover": "images/covers/boruto-two-blue-vortex.svg"
     },
     {
       "id": "adult-war",
@@ -70,7 +77,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "otona-taisen",
-      "updated_at": "2026-09-18T16:56:13.716Z"
+      "updated_at": "2026-09-18T16:56:13.716Z",
+      "cover": "images/covers/adult-war.svg"
     },
     {
       "id": "someone-hertz",
@@ -79,7 +87,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "someone-hertz",
-      "updated_at": "2026-09-19T08:32:22.815Z"
+      "updated_at": "2026-09-19T08:32:22.815Z",
+      "cover": "images/covers/someone-hertz.svg"
     },
     {
       "id": "shinobi-undercover",
@@ -88,7 +97,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "shinobi-undercover",
-      "updated_at": "2026-09-19T08:33:36.062Z"
+      "updated_at": "2026-09-19T08:33:36.062Z",
+      "cover": "images/covers/shinobi-undercover.svg"
     },
     {
       "id": "ichi-the-witch",
@@ -97,7 +107,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "ichi-the-witch",
-      "updated_at": "2026-09-19T08:31:54.036Z"
+      "updated_at": "2026-09-19T08:31:54.036Z",
+      "cover": "images/covers/ichi-the-witch.svg"
     },
     {
       "id": "akane-banashi",
@@ -106,7 +117,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "akane-banashi",
-      "updated_at": "2026-09-19T08:32:41.854Z"
+      "updated_at": "2026-09-19T08:32:41.854Z",
+      "cover": "images/covers/akane-banashi.svg"
     },
     {
       "id": "roku-house-of-oddities",
@@ -115,7 +127,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "roku-house-of-oddities",
-      "updated_at": "2026-09-19T08:34:02.485Z"
+      "updated_at": "2026-09-19T08:34:02.485Z",
+      "cover": "images/covers/roku-house-of-oddities.svg"
     },
     {
       "id": "gray-keith-no-makai-goyakuroku",
@@ -124,7 +137,8 @@
       "country": "JP",
       "language": "ja",
       "slug": "gray-keith-no-makai-goyakuroku",
-      "updated_at": "2026-09-19T08:33:17.945Z"
+      "updated_at": "2026-09-19T08:33:17.945Z",
+      "cover": "images/covers/gray-keith-no-makai-goyakuroku.svg"
     },
     {
       "id": "kingdo-raw",
@@ -134,7 +148,8 @@
       "country": "JP",
       "language": "ja",
       "created_at": "2026-09-22T12:59:09.791Z",
-      "updated_at": "2026-09-22T14:10:21.498Z"
+      "updated_at": "2026-09-22T14:10:21.498Z",
+      "cover": "images/covers/kingdo-raw.svg"
     },
     {
       "id": "kagurabachi-jp",
@@ -144,7 +159,8 @@
       "country": "JP",
       "language": "ja",
       "created_at": "2026-10-08T14:55:28.479Z",
-      "updated_at": "2026-10-08T15:16:39.800Z"
+      "updated_at": "2026-10-08T15:16:39.800Z",
+      "cover": "images/covers/kagurabachi-jp.svg"
     }
   ],
   "chapters": []
