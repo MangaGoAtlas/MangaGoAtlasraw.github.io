@@ -1,6 +1,6 @@
 /* MangaAtlas SEO System — isolated metadata/canonical/structured-data layer. */
 (async()=>{
-  if(location.pathname.startsWith('/MangaGoAtlasraw.github.io/admin')) return;
+  if(location.pathname.startsWith('/admin')) return;
   if(document.documentElement.dataset.mangaAtlasSeo==='ready') return;
   document.documentElement.dataset.mangaAtlasSeo='ready';
 
@@ -32,11 +32,11 @@
     const params=new URLSearchParams(location.search);
     const slug=params.get('slug');
 
-    if(path==='/MangaGoAtlasraw.github.io/chapter.html'||path==='/MangaGoAtlasraw.github.io/chapter'){
+    if(path==='/chapter.html'||path==='/chapter'){
       if(!slug) return;
       const [content,manual]=await Promise.all([
-        fetch('/MangaGoAtlasraw.github.io/data/content.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-        fetch('/MangaGoAtlasraw.github.io/data/manual-chapters.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
+        fetch('/data/content.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+        fetch('/data/manual-chapters.json?v='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
       ]);
       const rows=[...(content.chapters||[]),...(manual.chapters||[])];
       const c=rows.find(x=>String(x.slug||'')===String(slug));
@@ -46,7 +46,7 @@
       const number=c.number!=null?String(c.number):'';
       const seoTitle=(title+' | MangaAtlas').slice(0,70);
       const desc=(number?series+' chapter '+number+' raw release. ':'')+'Read '+title+' on MangaAtlas.';
-      const url=base+'/MangaGoAtlasraw.github.io/chapter.html?slug='+encodeURIComponent(slug);
+      const url=base+'/chapter.html?slug='+encodeURIComponent(slug);
       document.title=seoTitle;
       upsert('meta[name="description"]',{name:'description',content:desc.slice(0,155)});
       upsert('meta[property="og:title"]',{'property':'og:title',content:seoTitle});
@@ -63,24 +63,24 @@
         description:desc.slice(0,200),
         url:url,
         mainEntityOfPage:{'@type':'WebPage','@id':url},
-        isPartOf:{'@type':'WebSite',name:'MangaAtlas',url:base+'/MangaGoAtlasraw.github.io/'},
+        isPartOf:{'@type':'WebSite',name:'MangaAtlas',url:base+'/'},
         about:{'@type':'Thing',name:series},
         keywords:[series,'manga raw','manga chapter','chapter '+number].filter(Boolean).join(', ')
       });
       return;
     }
 
-    if(path==='/MangaGoAtlasraw.github.io/'){
+    if(path==='/'){
       document.title='MangaAtlas — Latest Manga Chapters & Raw Releases';
       upsert('meta[name="description"]',{name:'description',content:'MangaAtlas — discover the latest manga chapters, raw releases and new chapter updates.'});
-      canonical(base+'/MangaGoAtlasraw.github.io/');
-      jsonLd({'@context':'https://schema.org','@type':'WebSite',name:'MangaAtlas',url:base+'/MangaGoAtlasraw.github.io/',description:'Latest manga chapters and raw releases on MangaAtlas.'});
+      canonical(base+'/');
+      jsonLd({'@context':'https://schema.org','@type':'WebSite',name:'MangaAtlas',url:base+'/',description:'Latest manga chapters and raw releases on MangaAtlas.'});
       return;
     }
 
-    if(path==='/MangaGoAtlasraw.github.io/latest-chapters.html'){
-      canonical(base+'/MangaGoAtlasraw.github.io/latest-chapters.html');
-      jsonLd({'@context':'https://schema.org','@type':'CollectionPage',name:'Latest Manga Chapters & Raw Releases | MangaAtlas',url:base+'/MangaGoAtlasraw.github.io/latest-chapters.html',isPartOf:{'@type':'WebSite',name:'MangaAtlas',url:base+'/MangaGoAtlasraw.github.io/'}});
+    if(path==='/latest-chapters.html'){
+      canonical(base+'/latest-chapters.html');
+      jsonLd({'@context':'https://schema.org','@type':'CollectionPage',name:'Latest Manga Chapters & Raw Releases | MangaAtlas',url:base+'/latest-chapters.html',isPartOf:{'@type':'WebSite',name:'MangaAtlas',url:base+'/'}});
     }
   }catch(e){console.warn('MangaAtlas SEO System unavailable',e)}
 })();
